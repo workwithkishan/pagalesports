@@ -37,6 +37,39 @@
     .nav-buttons button:hover {
       background: #e00000;
     }*/
+
+
+
+    .announcement-bar {
+    background-color: #000;
+    padding: 8px 0;
+    border-top: 2px solid yellow;
+    border-bottom: 2px solid yellow;
+    color: yellow;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+  }
+
+  .announcement-bar marquee {
+    color: yellow;
+  }
+
+  .announcement-bar strong {
+    color: yellow;
+    font-weight: bold;
+  }
+
+
+
+    
+
+
+
+
+
+
+    
     .hero {
       text-align: center;
       padding: 100px 20px;
@@ -126,12 +159,26 @@
 
 
 
+  
+
+
+
+
+<div class="announcement-bar">
+  <marquee behavior="scroll" direction="left" scrollamount="7">
+    🟡 <strong>Hamare yaha COMPLETELY FREE rate hai! Abhi register kare 🚀</strong>
+  </marquee>
+</div>
 
 
 
 
 
 
+
+
+
+  
 
 
   <!-- Events Section -->
@@ -150,11 +197,11 @@
       ============================ -->
 
 
-      <h3 style="color: #fff;">PG Fun POP</h3>
+      <h3 style="color: #fff;">PE Rafta Championship-I</h3>
       <p style="color: #ccc; margin: 10px 0;">
-        Date: 20 July 2025  
+        Date: 16 July 2025  |  At 8PM  
         <br><br>
-        (FREE - NO HIDDEN CHARGE)
+        (FREE ENTRY)
       </p>
 
       <!-- Countdown timer display -->
@@ -174,7 +221,7 @@
          <!-- Registration Form Section (Initially hidden) -->
     <section id="registrationForm" style="display: none; padding: 60px 20px; background-color: #0f0f0f; font-family: 'Poppins', sans-serif;">
       <h2 style="text-align: center; font-size: 2.5rem; color: #ff4444; margin-bottom: 40px; letter-spacing: 1px;">
-         Team Registration <br><span style="font-size: 1.2rem; color: #aaa;">NOTE:  ENTER YOUR IN-GAME NAME HERE (NOT PERSONAL NAME) </span>
+         Team Registration <br><span style="font-size: 1.2rem; color: #aaa;">NOTE:  Only Serious Team Register </span>
       </h2>
 
      <form action="https://api.web3forms.com/submit" method="POST" style="max-width: 700px; margin: auto; background-color: #1a1a1a; padding: 30px; border-radius: 15px; box-shadow: 0 0 20px rgba(255, 68, 68, 0.3); color: white;">
@@ -230,7 +277,7 @@
     <option>Assaulter</option>
   </select><br>
 
-  <label style="font-weight: 600;">Player 5 Name:</label>
+  <label style="font-weight: 600;">Player 5 Name: (Optional)</label>
   <input type="text" name="player5_name" class="form-input">
   <select name="player5_role" class="form-select">
     <option value="">Select Role</option>
@@ -264,7 +311,7 @@
     <!-- Upcoming (Blurred) Events -->
     <!-- Upcoming (Initially Blurred) Event Card -->
     <div id="event2" style="background-color: #1f1f1f; padding: 20px; border-radius: 10px; width: 280px; opacity: 0.4; pointer-events: none;">
-      <h3 style="color: #fff;">2. PGE July B</h3>
+      <h3 style="color: #fff;">PE Rafta Championship-II</h3>
       <p style="color: #ccc; margin: 10px 0;" id="event2-date">Date: Coming Soon</p>
       <button 
         id="event2-btn"
@@ -276,8 +323,8 @@
 
 
     <div style="background-color: #1f1f1f; padding: 20px; border-radius: 10px; width: 280px; opacity: 0.4; pointer-events: none;">
-      <h3 style="color: #fff;">3. PGE July C</h3>
-      <p style="color: #ccc; margin: 10px 0;">Date: Coming Soon</p>
+      <h3 style="color: #fff;">PE Strap Championship</h3>
+      <p style="color: #ccc; margin: 10px 0;">Prize: Coming Soon</p>
       <button style="padding: 10px 18px; background-color: #555; color: white; border: none; border-radius: 6px;" disabled>
         Coming Soon
       </button>
@@ -353,13 +400,13 @@
   <h2 style="text-align: center; color: #ff4d4d; font-size: 26px; margin-bottom: 20px; text-shadow: 0 0 10px #ff4d4d;">🎮 Official Tournament Rules</h2>
 
   <ul style="list-style-type: none; padding: 0; font-size: 15.5px; line-height: 1.6;">
-    <li> Team Size: <b>Min 4</b> – <b>Max 5 Players</b> (including IGL)</li>
-    <li> Strictly NO hacks, emulators, or 3rd party tools</li>
-    <li> Map: <b>Random</b></li>
-    <li> Join match within <b> 10 min </b> or get <b> <b><span style="color: #ff5555;">Disqualified</span></b></li>
-    <li> IGL must submit screenshot of result in Alotted Group</li>
-    <li> Once You Registered<b> <b><span style="color:#ff5555;">You Can't Change Players</span></b></li>
-    <li> Final Decision: <b>Admins Only</b></li>
+     <li>👥 Team Size: <b>Min 4</b> – <b>Max 5 Players</b> (including IGL)</li>
+    <li>🚫 Strictly NO hacks, emulators, or 3rd party tools</li>
+    <li>🗺️ Map: <b>Random</b></li>
+    <li>⏱️Join match within <b> 10 min </b> or get <b> <b><span style="color: #ff5555;">Disqualified</span></b></li>
+    <li>📸 IGL must submit screenshot of result in Alotted Group</li>
+    <li>♻️ Once You Registered<b> <b><span style="color:#ff5555;">You Can't Change Players</span></b></li>
+    <li>⚖️ Final Decision: <b>Admins Only</b></li>
   </ul>
 
   <hr style="border: none; border-top: 1px solid #ff4d4d; margin: 20px 0;">
@@ -434,7 +481,7 @@
 
 
       // Set deadline date and time
-  const deadline = new Date("July 19, 2025 23:59:59").getTime(); // 11:59PM on 19th July
+  const deadline = new Date("July 16, 2025 19:59:59").getTime(); // 11:59PM on 19th July
   const timer = document.getElementById("timer");
   const btn = document.getElementById("registerBtn");
 
@@ -466,7 +513,7 @@
 
 
   // Activate on this date/time
-  const event2Activation = new Date("July 20, 2025 01:05:00").getTime(); // Change as needed
+  const event2Activation = new Date("July 16, 2025 20:00:00").getTime(); // Change as needed
   const event2Div = document.getElementById("event2");
   const event2Btn = document.getElementById("event2-btn");
   const event2Date = document.getElementById("event2-date");
@@ -486,7 +533,7 @@
       event2Btn.style.cursor = "pointer";
       event2Btn.setAttribute("onclick", "toggleForm()");
 
-      event2Date.innerHTML = "Date: 27 July 2025";
+      event2Date.innerHTML = "Date: 17 July 2025";
     }
   }, 1000);
 
