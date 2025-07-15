@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagal Esports | Free Fire Tournament</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: #0e0e0e;
+      color: #fff;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff4444;
+    }
+    /*.nav-buttons button {
+      margin-left: 15px;
+      padding: 8px 16px;
+      border: none;
+      background: #ff4444;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .nav-buttons button:hover {
+      background: #e00000;
+    }*/
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(to right, #111, #1c1c1c);
+    }
+    .hero h1 {
+      font-size: 48px;
+      color: #ff4444;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      color: #ccc;
+    }
+
+
+
+
+/*Form CSS*/
+      .form-input {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0 20px 0;
+        border: none;
+        border-radius: 8px;
+        background-color: #2a2a2a;
+        color: #fff;
+        font-size: 1rem;
+        outline: none;
+      }
+
+      .form-input:focus {
+        background-color: #333;
+        border: 1px solid #ff4444;
+      }
+
+      .form-select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 25px;
+        border-radius: 8px;
+        background-color: #2a2a2a;
+        color: #fff;
+        border: none;
+        font-size: 1rem;
+        outline: none;
+      }
+
+      .form-select:focus {
+        border: 1px solid #ff4444;
+      }
+
+      button:hover {
+        background-color: #e63939;
+      }
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+      <img src="logo.png" alt="Pagal Esports Logo" style="height: 40px; border-radius: 60px;">
+      <span>Pagal Esports</span>
+    </div>
+
+    <!-- <div class="nav-buttons">
+      <button onclick="alert('Registration coming soon')">Register</button>
+      <button onclick="alert('Login coming soon')">Login</button>
+    </div> -->
+  </header>
+
+  <!-- Home Section -->
+  <section class="hero">
+    <h1>Hey Gamers, Are You Ready For Battle?</h1>
+    <p>Join the ultimate Free Fire tournament and prove your squad's dominance.</p>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Events Section -->
+<section style="padding: 60px 20px; background-color: #121212;">
+  <h2 style="text-align: center; font-size: 2rem; color: #ff4444; margin-bottom: 30px;">
+    🔥 Upcoming Tournaments
+  </h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+    <!-- Active Event -->
+    <div style="background-color: #1f1f1f; padding: 20px; border-radius: 10px; width: 280px; box-shadow: 0 0 10px rgba(255,0,0,0.2);">
+
+
+<!-- ============================
+      ============================ -->
+
+
+      <h3 style="color: #fff;">PG Fun POP</h3>
+      <p style="color: #ccc; margin: 10px 0;">
+        Date: 20 July 2025  
+        <br><br>
+        (FREE - NO HIDDEN CHARGE)
+      </p>
+
+      <!-- Countdown timer display -->
+      <p id="timer" style="color: #00ff00; font-weight: bold; margin-bottom: 15px;"></p>
+
+      <!-- Register Button -->
+      <button 
+        id="registerBtn"
+        onclick="toggleForm()" 
+        style="padding: 10px 18px; background-color: #ff4444; color: white; border: none; border-radius: 6px; cursor: pointer;">
+        Register Now
+      </button>
+
+    </div>
+
+
+         <!-- Registration Form Section (Initially hidden) -->
+    <section id="registrationForm" style="display: none; padding: 60px 20px; background-color: #0f0f0f; font-family: 'Poppins', sans-serif;">
+      <h2 style="text-align: center; font-size: 2.5rem; color: #ff4444; margin-bottom: 40px; letter-spacing: 1px;">
+        📝 Team Registration <br><span style="font-size: 1.2rem; color: #aaa;">NOTE:  ENTER YOUR IN-GAME NAME HERE (NOT PERSONAL NAME) </span>
+      </h2>
+
+      <form action="https://formsubmit.co/kumkishan59pkgmail.com" method="POST" style="max-width: 700px; margin: auto; background-color: #1a1a1a; padding: 30px; border-radius: 15px; box-shadow: 0 0 20px rgba(255, 68, 68, 0.3); color: white;">
+        
+        <!-- Team Name -->
+        <label style="font-weight: 600;">Team Name:</label>
+        <input type="text" name="team_name" required class="form-input"><br>
+
+        <!-- IGL -->
+        <label style="font-weight: 600;">IGL Name:</label>
+        <input type="text" name="igl_name" required class="form-input">
+        <select name="igl_role" required class="form-select">
+          <option value="">Select Role</option>
+          <option>Sniper</option>
+          <option>Rusher</option>
+          <option>Assaulter</option>
+        </select><br>
+
+        <!-- Player 2 to 5 -->
+        <label style="font-weight: 600;">Player 2 Name:</label>
+        <input type="text" name="player2_name" required class="form-input">
+        <select name="player2_role" required class="form-select">
+          <option value="">Select Role</option>
+          <option>Sniper</option>
+          <option>Rusher</option>
+          <option>Assaulter</option>
+        </select><br>
+
+        <label style="font-weight: 600;">Player 3 Name:</label>
+        <input type="text" name="player3_name" required class="form-input">
+        <select name="player3_role" required class="form-select">
+          <option value="">Select Role</option>
+          <option>Sniper</option>
+          <option>Rusher</option>
+          <option>Assaulter</option>
+        </select><br>
+
+        <label style="font-weight: 600;">Player 4 Name:</label>
+        <input type="text" name="player4_name" required class="form-input">
+        <select name="player4_role" required class="form-select">
+          <option value="">Select Role</option>
+          <option>Sniper</option>
+          <option>Rusher</option>
+          <option>Assaulter</option>
+        </select><br>
+
+        <label style="font-weight: 600;">Player 5 Name:</label>
+        <input type="text" name="player5_name" class="form-input">
+        <select name="player5_role" class="form-select">
+          <option value="">Select Role</option>
+          <option>Sniper</option>
+          <option>Rusher</option>
+          <option>Assaulter</option>
+        </select><br>
+
+        <!-- WhatsApp Number -->
+        <label style="font-weight: 600;">WhatsApp Number:</label>
+        <input type="text" name="whatsapp" required pattern="[0-9]{10}" maxlength="10" class="form-input"><br>
+
+        <div style="text-align: center; margin-top: 30px;">
+          <button type="submit" style="background-color: #ff4444; padding: 12px 30px; border: none; color: white; font-size: 1rem; border-radius: 8px; cursor: pointer; transition: background-color 0.3s;">
+            🚀 Submit Registration
+          </button>
+        </div>
+      </form>
+    </section>
+
+    
+
+
+
+
+
+
+
+
+    <!-- Upcoming (Blurred) Events -->
+    <!-- Upcoming (Initially Blurred) Event Card -->
+    <div id="event2" style="background-color: #1f1f1f; padding: 20px; border-radius: 10px; width: 280px; opacity: 0.4; pointer-events: none;">
+      <h3 style="color: #fff;">2. PGE July B</h3>
+      <p style="color: #ccc; margin: 10px 0;" id="event2-date">Date: Coming Soon</p>
+      <button 
+        id="event2-btn"
+        style="padding: 10px 18px; background-color: #555; color: white; border: none; border-radius: 6px;" 
+        disabled>
+        Coming Soon
+      </button>
+    </div>
+
+
+    <div style="background-color: #1f1f1f; padding: 20px; border-radius: 10px; width: 280px; opacity: 0.4; pointer-events: none;">
+      <h3 style="color: #fff;">3. PGE July C</h3>
+      <p style="color: #ccc; margin: 10px 0;">Date: Coming Soon</p>
+      <button style="padding: 10px 18px; background-color: #555; color: white; border: none; border-radius: 6px;" disabled>
+        Coming Soon
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <section id="winners" style="background-color: #121212; padding: 50px 20px; color: white;">
+  <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: #ffcc00;">
+    🏆 Last Week's Winners
+  </h2>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+
+    <!-- 1st Position -->
+    <div style="background-color: #1f1f1f; padding: 20px; border-radius: 15px; width: 300px; box-shadow: 0 0 15px gold;">
+      <h3 style="color: gold; font-size: 1.8rem;">🥇 1st Place</h3>
+      <p><strong>Team:</strong> Pagal Esports</p>
+      <ul style="padding-left: 20px;">
+        <li>IGL: Deepu</li>
+        <li>Player 2: Kishan</li>
+        <li>Player 3: Anup</li>
+        <li>Player 4: Hema</li>
+        <li>Player 5: N/A</li>
+      </ul>
+    </div>
+
+    <!-- 2nd Position -->
+    <div style="background-color: #1f1f1f; padding: 20px; border-radius: 15px; width: 300px; box-shadow: 0 0 15px silver;">
+      <h3 style="color: silver; font-size: 1.8rem;">🥈 2nd Place</h3>
+      <p><strong>Team:</strong> Shadow Hunters</p>
+      <ul style="padding-left: 20px;">
+        <li>IGL: Raghav</li>
+        <li>Player 2: Neeraj</li>
+        <li>Player 3: Ayush</li>
+        <li>Player 4: Harsh</li>
+        <li>Player 5: Pranav</li>
+      </ul>
+    </div>
+
+    <!-- 3rd Position -->
+    <div style="background-color: #1f1f1f; padding: 20px; border-radius: 15px; width: 300px; box-shadow: 0 0 15px #cd7f32;">
+      <h3 style="color: #cd7f32; font-size: 1.8rem;">🥉 3rd Place</h3>
+      <p><strong>Team:</strong> Death Squad</p>
+      <ul style="padding-left: 20px;">
+        <li>IGL: Aarav</li>
+        <li>Player 2: Dev</li>
+        <li>Player 3: Yash</li>
+        <li>Player 4: Veer</li>
+        <li>Player 5: N/A</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- GAMER RULES SECTION - Compact & Cool -->
+<div style="background: linear-gradient(145deg, #1a1a1a, #2a2a2a); padding: 25px 20px; border-radius: 16px; max-width: 600px; margin: 40px auto; box-shadow: 0 0 25px rgba(255, 69, 69, 0.4); font-family: 'Poppins', sans-serif; color: #fff;">
+
+  <h2 style="text-align: center; color: #ff4d4d; font-size: 26px; margin-bottom: 20px; text-shadow: 0 0 10px #ff4d4d;">🎮 Official Tournament Rules</h2>
+
+  <ul style="list-style-type: none; padding: 0; font-size: 15.5px; line-height: 1.6;">
+    <li>👥 Team Size: <b>Min 4</b> – <b>Max 5 Players</b> (including IGL)</li>
+    <li>🚫 Strictly NO hacks, emulators, or 3rd party tools</li>
+    <li>🗺️ Map: <b>Random</b></li>
+    <li>⏱️Join match within <b> 10 min </b> or get <b> <b><span style="color: #ff5555;">Disqualified</span></b></li>
+    <li>📸 IGL must submit screenshot of result in Alotted Group</li>
+    <li>♻️ Once You Registered<b> <b><span style="color:#ff5555;">You Can't Change Players</span></b></li>
+    <li>⚖️ Final Decision: <b>Admins Only</b></li>
+  </ul>
+
+  <hr style="border: none; border-top: 1px solid #ff4d4d; margin: 20px 0;">
+
+    <h3 style="color: #00ffcc; font-size: 20px; margin-bottom: 15px; text-align: center; text-shadow: 0 0 5px #00ffcc;">🏆 Points System</h3>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; font-size: 15px;">
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">🔫 Kill = <b>1 pt</b></div>
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">🥇 1st = <b>12 pts</b></div>
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">🥈 2nd = <b>9 pts</b></div>
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">🥉 3rd = <b>8 pts</b></div>
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">4th = <b>7 pts</b></div>
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">5th = <b>6 pts</b></div>
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">6th = <b>5 pts</b></div>
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">7th = <b>4 pts</b></div>
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">8th = <b>3 pts</b></div>
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">9th = <b>2 pts</b></div>
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">🔟 10th = <b>1 pt</b></div>
+    <div style="background: #292929; padding: 8px 14px; border-radius: 8px;">❌ 11th/12th = <b>0 pts</b></div>
+  </div>
+
+  <div style="text-align: center; margin-top: 25px;">
+    <span style="font-size: 16px; color: #ffd700;">🔥 Follow Rules. Play Fair! 🔥</span>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ====================== FOOTER ====================== -->
+<footer style="background-color: #121212; color: #ccc; padding: 40px 20px; text-align: center; margin-top: 60px; border-top: 2px solid #ff4444;">
+  
+  <div style="max-width: 900px; margin: auto;">
+    <h2 style="color: #ff4444; font-size: 24px; margin-bottom: 10px;">🎮 Pagal Esports</h2>
+    <p style="font-size: 15px;">India's Ultimate Free Fire Underground Tournament!</p>
+
+    <div style="margin: 20px 0;">
+      <a href="https://www.instagram.com/pagallgamer/profilecard" target="_blank" style="margin: 0 10px; color: #ff4444; text-decoration: none;">Instagram</a> |
+      <a href="https://youtube.com/@pagalesportstournament" target="_blank" style="margin: 0 10px; color: #ff4444; text-decoration: none;">YouTube</a> |
+      <a href="https://discord.gg/byWH72mJ" target="_blank" style="margin: 0 10px; color: #ff4444; text-decoration: none;">Discord</a>
+    </div>
+
+    <!-- <p style="font-size: 14px;">📧 Contact: <a href="mailto:support@pgarena.com" style="color: #ccc;">support@pgarena.com</a></p> -->
+    <p style="font-size: 13px; margin-top: 10px;">© 2025 Pagal Esports. All Rights Reserved.</p>
+  </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+      // Set deadline date and time
+  const deadline = new Date("July 19, 2025 23:59:59").getTime(); // 11:59PM on 19th July
+  const timer = document.getElementById("timer");
+  const btn = document.getElementById("registerBtn");
+
+  const x = setInterval(function () {
+    const now = new Date().getTime();
+    const t = deadline - now;
+
+    if (t > 0) {
+      const days = Math.floor(t / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((t % (1000 * 60)) / 1000);
+      timer.innerHTML = `⏳ ${days}d ${hours}h ${minutes}m ${seconds}s left`;
+    } else {
+      clearInterval(x);
+      timer.innerHTML = "❌ Registration Closed";
+      btn.disabled = true;
+      btn.style.backgroundColor = "#555";
+      btn.style.cursor = "not-allowed";
+      btn.innerText = "Registration Closed";
+    }
+  }, 1000);
+
+
+
+
+
+
+
+
+  // Activate on this date/time
+  const event2Activation = new Date("July 20, 2025 01:05:00").getTime(); // Change as needed
+  const event2Div = document.getElementById("event2");
+  const event2Btn = document.getElementById("event2-btn");
+  const event2Date = document.getElementById("event2-date");
+
+  const checkEvent2 = setInterval(() => {
+    const now = new Date().getTime();
+    if (now >= event2Activation) {
+      clearInterval(checkEvent2);
+
+      // Make it active
+      event2Div.style.opacity = "1";
+      event2Div.style.pointerEvents = "auto";
+      
+      event2Btn.disabled = false;
+      event2Btn.innerText = "Register Now";
+      event2Btn.style.backgroundColor = "#ff4444";
+      event2Btn.style.cursor = "pointer";
+      event2Btn.setAttribute("onclick", "toggleForm()");
+
+      event2Date.innerHTML = "Date: 27 July 2025";
+    }
+  }, 1000);
+
+
+
+
+
+
+
+
+
+
+
+  function toggleForm() {
+    const formSection = document.getElementById("registrationForm");
+    if (formSection.style.display === "none") {
+      formSection.style.display = "block";
+      formSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      formSection.style.display = "none";
+    }
+  }
+</script>
+
+
+
+</body>
+</html>

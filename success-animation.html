@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Successful</title>
+  <style>
+    body {
+      margin: 0;
+      background: #181818;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .success-container {
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .checkmark {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 4px solid #4CAF50;
+      position: relative;
+      box-shadow: 0 0 15px #4CAF50;
+      margin-bottom: 20px;
+    }
+
+    .checkmark::after {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: 10px;
+      width: 25px;
+      height: 50px;
+      border-right: 5px solid #4CAF50;
+      border-bottom: 5px solid #4CAF50;
+      transform: rotate(45deg);
+      animation: drawCheck 0.6s ease forwards;
+    }
+
+    @keyframes drawCheck {
+      0% {
+        width: 0;
+        height: 0;
+      }
+      100% {
+        width: 25px;
+        height: 50px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    h2 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    .redirect-msg {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="success-container">
+    <div class="checkmark"></div>
+    <h2>Registration Successful!</h2>
+    <p>Thank you for registering your team. See you in the battle! 🔥</p>
+    <div class="redirect-msg">Redirecting to homepage in 5 seconds...</div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "index.php";
+    }, 5000);
+  </script>
+</body>
+</html>
